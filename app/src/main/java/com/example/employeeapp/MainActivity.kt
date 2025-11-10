@@ -1,6 +1,8 @@
 package com.example.employeeapp
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -63,6 +65,13 @@ class MainActivity : AppCompatActivity() {
                     names
                 )
                 binding.lvNama.adapter = adapter
+
+                binding.lvNama.onItemClickListener = AdapterView.OnItemClickListener { _, _, position, _ ->
+                    val id = employees[position].id
+                    val intent = Intent(this@MainActivity, DetailEmployeeActivity::class.java)
+                    intent.putExtra("EXTRA_ID", id)
+                    startActivity(intent)
+                }
             }
 
             override fun onFailure(call: Call<EmployeeResponse>, t: Throwable) {
