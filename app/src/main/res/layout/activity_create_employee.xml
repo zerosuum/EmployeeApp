@@ -1,46 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailEmployeeActivity"
-    android:padding="16dp"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="16dp">
 
     <EditText
-        android:id="@+id/txt_name"
+        android:id="@+id/edt_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Name" />
 
     <EditText
-        android:id="@+id/txt_salary"
+        android:id="@+id/edt_salary"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Salary"
         android:inputType="number" />
 
     <EditText
-        android:id="@+id/txt_age"
+        android:id="@+id/edt_age"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Age"
         android:inputType="number" />
 
-    <!-- Tombol Update -->
     <Button
-        android:id="@+id/btn_update"
+        android:id="@+id/btn_save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Update" />
-
-    <!-- Tombol Delete -->
-    <Button
-        android:id="@+id/btn_delete"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Delete" />
+        android:text="Save" />
 
 </LinearLayout>

@@ -23,6 +23,16 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        binding.btnCreate.setOnClickListener {
+            val intent = Intent(this, CreateEmployeeActivity::class.java)
+            startActivity(intent)
+        }
+
+        loadEmployee()
+    }
+
+    override fun onResume() {
+        super.onResume()
         loadEmployee()
     }
 

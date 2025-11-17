@@ -13,6 +13,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.EmployeeApp">
+
+        <activity
+            android:name=".CreateEmployeeActivity"
+            android:exported="false" />
         <activity
             android:name=".DetailEmployeeActivity"
             android:exported="false" />
